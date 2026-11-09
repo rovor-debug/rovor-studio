@@ -2,6 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const progression = [
+  [146.83, 174.61, 220, 261.63, 329.63], // Dm9
+  [116.54, 146.83, 174.61, 220, 293.66], // Bbmaj7
+  [130.81, 164.81, 196, 261.63, 329.63], // Fadd9
+  [130.81, 164.81, 196, 246.94, 293.66], // Cmaj7
+];
+
 export default function StudioExperience({ children }) {
   const [introVisible, setIntroVisible] = useState(true);
   const [soundOn, setSoundOn] = useState(false);
@@ -16,9 +23,8 @@ export default function StudioExperience({ children }) {
   useEffect(() => () => {
     const audio = audioRef.current;
     if (audio) {
-      audio.oscillators.forEach((oscillator) => {
-        try { oscillator.stop(); } catch {}
-      });
+      window.clearInterval(audio.interval);
+      audio.voices.forEach((voice) => { try { voice.stop(); } catch {} });
       audio.context.close();
       audioRef.current = null;
     }
@@ -28,14 +34,14 @@ export default function StudioExperience({ children }) {
     if (soundOn) {
       const audio = audioRef.current;
       if (audio) {
-        audio.master.gain.setTargetAtTime(0, audio.context.currentTime, 0.8);
+        window.clearInterval(audio.interval);
+        audio.master.gain.setTargetAtTime(0, audio.context.currentTime, 1.1);
         window.setTimeout(() => {
-          audio.oscillators.forEach((oscillator) => {
-            try { oscillator.stop(); } catch {}
-          });
+          if (audioRef.current !== audio) return;
+          audio.voices.forEach((voice) => { try { voice.stop(); } catch {} });
           audio.context.close();
-          if (audioRef.current === audio) audioRef.current = null;
-        }, 2600);
+          audioRef.current = null;
+        }, 3600);
       }
       setSoundOn(false);
       return;
@@ -43,26 +49,42 @@ export default function StudioExperience({ children }) {
 
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     if (!AudioContextClass) return;
-
     const context = new AudioContextClass();
     const master = context.createGain();
     master.gain.setValueAtTime(0, context.currentTime);
-    master.gain.linearRampToValueAtTime(0.045, context.currentTime + 2.5);
+    master.gain.linearRampToValueAtTime(0.12, context.currentTime + 3.5);
     master.connect(context.destination);
 
-    const oscillators = [110, 164.81, 220, 329.63].map((frequency, index) => {
-      const oscillator = context.createOscillator();
-      const voice = context.createGain();
-      oscillator.type = index === 3 ? "triangle" : "sine";
-      oscillator.frequency.value = frequency;
-      voice.gain.value = index === 0 ? 0.34 : 0.16;
-      oscillator.connect(voice);
-      voice.connect(master);
-      oscillator.start();
-      return oscillator;
-    });
+    const filter = context.createBiquadFilter();
+    filter.type = "lowpass";
+    filter.frequency.value = 1250;
+    filter.Q.value = 0.45;
+    filter.connect(master);
 
-    audioRef.current = { context, master, oscillators };
+    const voices = [];
+    const playChord = (index) => {
+      const now = context.currentTime;
+      progression[index % progression.length].forEach((frequency, noteIndex) => {
+        const oscillator = context.createOscillator();
+        const voiceGain = context.createGain();
+        oscillator.type = noteIndex === 4 ? "triangle" : "sine";
+        oscillator.frequency.setValueAtTime(frequency, now);
+        oscillator.detune.value = noteIndex % 2 ? -4 : 4;
+        voiceGain.gain.setValueAtTime(0.0001, now);
+        voiceGain.gain.linearRampToValueAtTime(noteIndex === 0 ? 0.17 : 0.095, now + 1.8);
+        voiceGain.gain.setTargetAtTime(0.0001, now + 4.1, 1.15);
+        oscillator.connect(voiceGain);
+        voiceGain.connect(filter);
+        oscillator.start(now);
+        oscillator.stop(now + 9);
+        voices.push(oscillator);
+      });
+    };
+
+    let chordIndex = 0;
+    playChord(chordIndex++);
+    const interval = window.setInterval(() => playChord(chordIndex++), 5200);
+    audioRef.current = { context, master, voices, interval };
     setSoundOn(true);
   }
 
@@ -76,15 +98,9 @@ export default function StudioExperience({ children }) {
         </div>
       </div>
       {children}
-      <button
-        className={soundOn ? "sound-control sound-control--on" : "sound-control"}
-        type="button"
-        onClick={toggleSound}
-        aria-pressed={soundOn}
-        aria-label={soundOn ? "Turn ambient sound off" : "Turn ambient sound on"}
-      >
+      <button className={soundOn ? "sound-control sound-control--on" : "sound-control"} type="button" onClick={toggleSound} aria-pressed={soundOn} aria-label={soundOn ? "Turn soundtrack off" : "Play ambient soundtrack"}>
         <span className="sound-control__bars" aria-hidden="true"><i /><i /><i /><i /></span>
-        <span>{soundOn ? "Sound on" : "Sound off"}</span>
+        <span>{soundOn ? "Soundtrack on" : "Play soundtrack"}</span>
       </button>
     </>
   );
