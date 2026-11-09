@@ -264,9 +264,9 @@ body { cursor: auto; }
 
 /* Cinematic architecture film + accessible soundtrack controls */
 .hero__image { z-index: 0; }
-.hero__video { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .78; filter: saturate(.58) contrast(1.08) brightness(.76); }
-.hero__veil { z-index: 1; }
-.hero__content, .hero__index, .hero__scroll { z-index: 2; }
+.hero__video { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .78; filter: saturate(.58) contrast(1.08) brightness(.76); }
+.hero__veil { z-index: 2; }
+.hero__content, .hero__index, .hero__scroll { z-index: 3; }
 .sound-dock { position: fixed; z-index: 12; right: 24px; bottom: 22px; display: flex; align-items: center; gap: 13px; padding: 7px 12px 7px 7px; border: 1px solid rgba(245,245,242,.32); border-radius: 32px; background: rgba(17,17,17,.88); color: var(--paper); backdrop-filter: blur(14px); }
 .sound-dock .sound-control { position: static; min-width: 0; border: 0; background: transparent; padding: 7px 9px; }
 .sound-volume { display: flex; align-items: center; gap: 8px; color: #d6b782; font: 9px var(--mono); letter-spacing: .08em; }
@@ -276,4 +276,4 @@ body { cursor: auto; }
  .sound-volume input { width: 58px; }
  .hero__video { object-position: 55% center; }
 }
-@media (prefers-reduced-motion: reduce) { .hero__video { display: none; } }
+/* Keep the requested film visible even when reduced-motion is enabled; the video has no CSS motion effects. */
