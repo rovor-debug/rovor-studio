@@ -2,31 +2,8 @@ import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
 import StudioExperience from "@/components/StudioExperience";
-
-const projects = [
-  {
-    number: "01",
-    title: "House on the Slope",
-    type: "Residential · Concept",
-    year: "2025",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
-    className: "project-card--wide",
-  },
-  {
-    number: "02",
-    title: "Quiet Courtyard",
-    type: "Residential · Interior",
-    year: "2024",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
-  },
-  {
-    number: "03",
-    title: "The Material Study",
-    type: "Research · Installation",
-    year: "2024",
-    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85",
-  },
-];
+import Reveal from "@/components/Reveal";
+import { projects } from "@/lib/projects";
 
 export default function Home() {
   return (
@@ -51,11 +28,11 @@ export default function Home() {
         <section className="intro section-wrap" id="studio">
           <div className="section-kicker"><span>01</span><span>Studio / Perspective</span></div>
           <div className="intro__body">
-            <h2>Architecture is more than form. It is the art of <em>making space matter.</em></h2>
-            <div className="intro__note">
+            <Reveal><h2>Architecture is more than form. It is the art of <em>making space matter.</em></h2></Reveal>
+            <Reveal delay={120} className="intro__note">
               <p>ROVOR is an independent architecture and spatial design studio working across scales, from the intimacy of an interior to the wider context of the city.</p>
               <a className="text-link" href="#contact">Discover our approach <span>↘</span></a>
-            </div>
+            </Reveal>
           </div>
         </section>
 
@@ -65,7 +42,7 @@ export default function Home() {
             <p className="section-heading__aside">A selection of explorations<br />in space, light, and material.</p>
           </div>
           <div className="project-grid">
-            {projects.map((project) => <ProjectCard key={project.number} project={project} />)}
+            {projects.map((project, index) => <Reveal key={project.slug} delay={index * 90}><ProjectCard project={{...project, className: index === 0 ? "project-card--wide" : ""}} /></Reveal>)}
           </div>
         </section>
 
