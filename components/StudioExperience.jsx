@@ -70,7 +70,7 @@ export default function StudioExperience({ children }) {
     <>
       <div className={introVisible ? "intro-loader intro-loader--visible" : "intro-loader"} aria-hidden={!introVisible}>
         <div className="intro-loader__content">
-          <span className="intro-loader__wordmark">ROVOR</span>
+          <span className="intro-loader__wordmark" aria-label="ROVOR">{ "ROVOR".split("").map((letter, index) => <span className="intro-loader__letter" style={{ "--letter-index": index }} key={index}>{letter}</span>) }</span>
           <span className="intro-loader__line" />
           <span className="intro-loader__caption">ARCHITECTURE BEYOND TIME</span>
         </div>
