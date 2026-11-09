@@ -39,7 +39,7 @@ export default function StudioExperience({ children }) {
     if (audio) audio.master.gain.setTargetAtTime(next * 0.62, audio.context.currentTime, 0.12);
   }
 
-  function toggleSound() {
+  async function toggleSound() {
     if (soundOn) {
       const audio = audioRef.current;
       if (audio) {
@@ -59,6 +59,14 @@ export default function StudioExperience({ children }) {
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     if (!AudioContextClass) return;
     const context = new AudioContextClass();
+    // Some browsers create AudioContext in the suspended state. Resume it
+    // directly from the user's click before scheduling any sound.
+    try {
+      await context.resume();
+    } catch {
+      await context.close();
+      return;
+    }
     const master = context.createGain();
     master.gain.setValueAtTime(0, context.currentTime);
     master.gain.linearRampToValueAtTime(volume * 0.62, context.currentTime + 1.8);
