@@ -1,8 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "ROVOR — Architecture & Spatial Design",
-  description: "ROVOR is an independent architecture and spatial design studio.",
+  title: "ROVOR — Architecture Beyond Time",
+  description: "ROVOR is an independent architecture and spatial design studio exploring space, material, and light.",
+  applicationName: "ROVOR",
 };
 
 export default function RootLayout({ children }) {
