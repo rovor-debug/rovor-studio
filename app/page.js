@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
+import StudioExperience from "@/components/StudioExperience";
 
 const projects = [
   {
@@ -29,7 +30,7 @@ const projects = [
 
 export default function Home() {
   return (
-    <>
+    <StudioExperience>
       <Navbar />
       <main>
         <section className="hero" id="home">
@@ -37,13 +38,14 @@ export default function Home() {
           <div className="hero__veil" />
           <div className="hero__content">
             <p className="eyebrow hero__eyebrow">Independent architecture studio</p>
-            <h1>Spaces shaped<br />by <em>meaning.</em></h1>
+            <h1>Architecture<br /><em>beyond time.</em></h1>
             <div className="hero__bottom">
-              <p>We explore the relationship between people, place, and the built environment.</p>
+              <p>We shape thoughtful spaces through the quiet balance of context, material, and light.</p>
               <a className="text-link text-link--light" href="#work">Explore selected work <span>↘</span></a>
             </div>
           </div>
           <span className="hero__index">01 — 03 / ROVOR STUDIO</span>
+          <span className="hero__scroll">SCROLL TO EXPLORE <i /></span>
         </section>
 
         <section className="intro section-wrap" id="studio">
@@ -86,6 +88,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-    </>
+    </StudioExperience>
   );
 }
