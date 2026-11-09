@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <main>
         <section className="hero" id="home">
-          <div className="hero__image" aria-hidden="true" />
+          <div className="hero__image" aria-hidden="true" />\n          <video className="hero__video" autoPlay muted loop playsInline preload="metadata" poster="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90" aria-hidden="true"><source src="https://videos.pexels.com/video-files/6076828/6076828-uhd_3840_2160_30fps.mp4" type="video/mp4" /></video>
           <div className="hero__veil" />
           <div className="hero__content">
             <p className="eyebrow hero__eyebrow">Independent architecture studio</p>
