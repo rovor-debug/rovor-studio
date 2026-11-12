@@ -3,12 +3,8 @@ import LogoMark from "@/components/LogoMark";
 export default function Footer() {
   return (
     <footer className="footer">
-      <LogoMark className="footer__brand" href="/#home" />
-      <p>Independent architecture<br />& spatial design studio.</p>
-      <div className="footer__right">
-        <a href="mailto:hello@rovor.studio">Get in touch ↗</a>
-        <span>© {new Date().getFullYear()} ROVOR Studio</span>
-      </div>
+      <div className="footer__top"><LogoMark className="footer__brand" href="/#home" /><span>Architecture with intention.</span><a href="/#home">Back to top ↑</a></div>
+      <div className="footer__bottom"><span>Independent architecture & spatial design studio.</span><span>© {new Date().getFullYear()} ROVOR Studio</span><a href="mailto:hello@rovor.studio">hello@rovor.studio ↗</a></div>
     </footer>
   );
 }
