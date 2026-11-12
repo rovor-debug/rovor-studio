@@ -79,7 +79,7 @@ export default function StudioPage() {
         <section className="studio-contact section-wrap">
           <p className="eyebrow">05 / Begin a collaboration</p>
           <h2>Have a space<br />in <em>mind?</em></h2>
-          <Link className="text-link" href="/#contact">Tell us about your project <span>↗</span></Link>
+          <Link className="text-link" href="/contact">Tell us about your project <span>↗</span></Link>
         </section>
       </main>
       <Footer />
