@@ -98,9 +98,9 @@ export default function StudioExperience({ children }) {
         </div>
       </div>
       {children}
-      <button className={soundOn ? "sound-control sound-control--on" : "sound-control"} type="button" onClick={toggleSound} aria-pressed={soundOn} aria-label={soundOn ? "Turn soundtrack off" : "Play ambient soundtrack"}>
+      <button className={soundOn ? "sound-control sound-control--on" : "sound-control"} type="button" onClick={toggleSound} aria-pressed={soundOn} aria-label={soundOn ? "Turn ambient sound off" : "Play original ambient soundscape"}>
         <span className="sound-control__bars" aria-hidden="true"><i /><i /><i /><i /></span>
-        <span>{soundOn ? "Soundtrack on" : "Play soundtrack"}</span>
+        <span>{soundOn ? "Ambient sound on" : "Play ambient sound"}</span>
       </button>
     </>
   );
