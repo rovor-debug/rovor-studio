@@ -211,3 +211,51 @@ button,input{font:inherit}
  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
  .reveal{opacity:1;transform:none}
 }
+
+
+/* Project detail templates share the new ROVOR editorial system. */
+.project-detail__hero{min-height:min(850px,92svh);position:relative;display:flex;align-items:flex-end;padding:0 10vw 8vw;overflow:hidden;background:#242622;color:var(--paper)}
+.project-detail__hero-image{position:absolute;inset:0;background-size:cover;background-position:center;animation:hero-drift 22s ease-in-out infinite alternate}
+.project-detail__hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,19,17,.58),rgba(17,19,17,.06)),linear-gradient(0deg,rgba(17,19,17,.72),transparent 76%)}
+.project-detail__hero-content{position:relative;z-index:1;max-width:900px}
+.project-detail__hero-content .eyebrow{color:var(--accent);margin-bottom:25px}
+.project-detail__hero h1{font-size:clamp(58px,9vw,130px);line-height:.9;letter-spacing:-.1em;font-weight:600;margin:0}
+.project-detail__hero-description{max-width:440px;color:rgba(245,244,239,.76);font-size:12px;line-height:1.8;margin:28px 0 0}
+.project-detail__hero-index{position:absolute;right:5vw;bottom:4vw;z-index:1;color:rgba(245,244,239,.65);font:8px var(--mono);letter-spacing:.12em}
+.project-detail__overview{padding-top:130px;padding-bottom:105px}
+.project-detail__overview-grid{display:grid;grid-template-columns:1fr .7fr;gap:12vw;margin:70px 0 0 11%;align-items:start}
+.project-detail__overview h2{font-size:clamp(42px,6vw,78px);line-height:1;letter-spacing:-.085em;font-weight:500;margin:0}
+.project-detail__overview-grid>div>p{margin:0;font-size:12px;line-height:1.95;color:var(--muted)}
+.project-facts{border-top:1px solid var(--line);margin-top:35px}
+.project-facts>div{display:grid;grid-template-columns:.75fr 1.25fr;gap:15px;padding:13px 0;border-bottom:1px solid var(--line);font-size:10px}
+.project-facts span{color:var(--muted);font:8px var(--mono);text-transform:uppercase}
+.project-facts strong{font-weight:600}
+.project-detail__gallery{padding:0 10vw 120px}
+.project-detail__gallery img{width:100%;display:block;object-fit:cover}
+.project-detail__gallery-main img{aspect-ratio:1.65}
+.project-detail__gallery-caption{display:flex;justify-content:space-between;padding:17px 0 45px;color:var(--muted);font:8px var(--mono);text-transform:uppercase;letter-spacing:.1em}
+.project-detail__gallery-caption p{margin:0;font:11px var(--sans);text-transform:none;letter-spacing:0}
+.project-detail__gallery-secondary{width:72%;margin-left:auto}
+.project-detail__gallery-secondary img{aspect-ratio:1.25}
+.project-detail__closing{padding-top:20px;padding-bottom:130px}
+.project-detail__closing>.eyebrow{color:var(--muted)}
+.next-project{display:flex;justify-content:space-between;align-items:end;padding:28px 0;border-bottom:1px solid var(--line);margin:20px 0 30px;transition:color .25s}
+.next-project:hover{color:#839c4d}
+.next-project small{display:block;font:8px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:14px}
+.next-project strong{display:block;font:500 clamp(32px,5vw,64px) var(--serif)}
+.next-project__arrow{font-size:30px}
+.not-found{min-height:80svh;padding:180px 10vw 100px}
+.not-found h1{font-size:clamp(55px,9vw,110px);line-height:.92;letter-spacing:-.09em;font-weight:600}
+@media(max-width:680px){
+ .project-detail__hero{min-height:700px;padding:0 7vw 115px}
+ .project-detail__hero h1{font-size:clamp(52px,14vw,86px)}
+ .project-detail__overview{padding-top:95px;padding-bottom:75px}
+ .project-detail__overview-grid{display:block;margin:50px 0 0}
+ .project-detail__overview-grid>div>p{margin-top:30px}
+ .project-detail__gallery{padding:0 7vw 80px}
+ .project-detail__gallery-main img{aspect-ratio:1.05}
+ .project-detail__gallery-caption{display:block;line-height:1.8;padding-bottom:30px}
+ .project-detail__gallery-caption p{margin-top:5px}
+ .project-detail__gallery-secondary{width:88%}
+ .project-detail__closing{padding-bottom:90px}
+}
