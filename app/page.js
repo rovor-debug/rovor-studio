@@ -43,7 +43,7 @@ export default function Home() {
             <Reveal><p className="intro__overline">A thoughtful approach to the built environment.</p><h2>Not simply spaces.<br />A lasting sense of <em>place.</em></h2></Reveal>
             <Reveal delay={120} className="intro__note">
               <p>ROVOR is an independent architecture and spatial design studio. We work across scales, bringing a precise eye to proportion, atmosphere and the details that make a space feel inevitable.</p>
-              <a className="text-link" href="#approach">Our philosophy <span>↘</span></a>
+              <a className="text-link" href="/studio">Discover the studio <span>↗</span></a>
             </Reveal>
           </div>
           <div className="intro__coordinates"><span>DESIGN WITH INTENTION</span><span>01 / 04</span></div>
