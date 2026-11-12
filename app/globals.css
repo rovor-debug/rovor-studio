@@ -260,3 +260,60 @@ body { cursor: auto; }
 @keyframes line-grow { from { transform: scaleY(0); opacity: 0; } to { transform: scaleY(1); opacity: 1; } }
 @media (max-width:760px) { .statement::before { width: 70vw; right: -28vw; } .statement::after { width: 48vw; right: -18vw; } .intro__body::before { left: -5%; } }
 @media (prefers-reduced-motion: reduce) { .statement::before, .statement::after { animation: none; } }
+
+
+/* ROVOR approved lockup — monogram and champagne-gold wordmark */
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.logo-mark__symbol { display: block; width: 31px; height: 35px; flex: 0 0 auto; }
+.logo-mark__type { display: flex; flex-direction: column; gap: 3px; }
+.logo-mark__letters {
+  display: inline-flex;
+  align-items: center;
+  gap: .28em;
+  font: 400 17px/1 var(--sans);
+  letter-spacing: .12em;
+}
+.logo-mark__letter { display: inline-block; transition: transform .45s var(--motion-ease), color .3s ease; }
+.logo-mark:hover .logo-mark__letter { transform: translateY(-2px); color: #e2c397; }
+.logo-mark__descriptor {
+  color: currentColor;
+  font: 7px/1.2 var(--mono);
+  letter-spacing: .19em;
+  white-space: nowrap;
+}
+.navbar .logo-mark { color: #d0ad7d; }
+.footer .logo-mark { color: var(--accent); }
+.footer .logo-mark__symbol { width: 37px; height: 42px; }
+.footer .logo-mark__letters { font-size: 21px; }
+.footer .logo-mark__descriptor { font-size: 8px; }
+.navbar .menu-toggle:focus-visible,
+.navbar a:focus-visible,
+.footer a:focus-visible,
+.text-link:focus-visible,
+.contact__email:focus-visible,
+.project-card a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+.project-card__image { background: #d8d6ce; }
+@media (max-width: 760px) {
+  .navbar .logo-mark { gap: 8px; }
+  .navbar .logo-mark__symbol { width: 27px; height: 31px; }
+  .navbar .logo-mark__letters { font-size: 15px; }
+  .navbar .logo-mark__descriptor { font-size: 6px; letter-spacing: .16em; }
+  .footer .logo-mark__symbol { width: 31px; height: 36px; }
+  .footer .logo-mark__letters { font-size: 18px; }
+  .footer .logo-mark__descriptor { font-size: 6px; }
+}
+@media (max-width: 360px) {
+  .navbar { padding-left: 5vw; padding-right: 5vw; }
+  .navbar .logo-mark__symbol { width: 23px; }
+  .navbar .logo-mark__letters { font-size: 13px; }
+  .navbar .logo-mark__descriptor { font-size: 5px; }
+}
