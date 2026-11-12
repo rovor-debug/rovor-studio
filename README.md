@@ -1,28 +1,28 @@
 # ROVOR Studio
 
-A minimal editorial portfolio website for ROVOR, an independent architecture and spatial design studio.
+An editorial portfolio for ROVOR, an independent architecture and spatial design studio. Built with Next.js and React.
 
-## Getting started
-
-Install dependencies:
+## Local development
 
 ```bash
 npm install
-```
-
-Run the development server:
-
-```bash
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open http://localhost:3000.
 
-## Before launch
+## Production
 
-- Replace the sample project titles, descriptions, and Unsplash images with approved ROVOR projects and photography.
-- Replace `hello@rovor.studio` with the studio's confirmed contact email.
-- Add final social links and legal information if required.
-- Run `npm run build` before deployment.
+The project is configured for deployment on **Vercel** through the connected GitHub repository. Every push to the production branch should trigger a deployment in Vercel.
 
-Built with Next.js and React.
+Before announcing the portfolio as final:
+- Replace concept-study imagery and descriptions with approved ROVOR work when available.
+- Confirm the production domain in Vercel and add it to the domain settings.
+- Add verified social links and any required legal/business details.
+- Run the production build and review desktop and mobile layouts.
+
+## Stack
+
+- Next.js 15
+- React 19
+- CSS, with responsive layouts and reduced-motion support
