@@ -59,7 +59,7 @@ export default function Home() {
           <div className="section-kicker"><span>04</span><span>Start a conversation</span></div>
           <div className="contact__body">
             <h2>Have a place<br />in mind?</h2>
-            <a className="contact__email" href="mailto:hello@rovor.studio">hello@rovor.studio <span>↗</span></a>
+            <a className="contact__email" href="mailto:Gp.rovor@gmail.com">Gp.rovor@gmail.com <span>↗</span></a>
             <p>For collaborations, project enquiries, and thoughtful conversations.</p>
           </div>
         </section>
