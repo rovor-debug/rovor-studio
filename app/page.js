@@ -38,7 +38,7 @@ export default function Home() {
         </section>
 
         <div className="ticker" aria-label="ROVOR architecture and spatial design">
-          <div className="ticker__track"><span>Architecture</span><i>✳</i><span>Interiors</span><i>✳</i><span>Spatial identity</span><i>✳</i><span>Objects & atmosphere</span><i>✳</i><span>Architecture</span><i>✳</i><span>Interiors</span><i>✳</i><span>Spatial identity</span><i>✳</i></div>
+          <div className="ticker__track"><span>Architecture</span><i>✳</i><span>Interiors</span><i>✳</i><span>Spatial identity</span><i>✳</i><span>Objects & atmosphere</span><i>✳</i><span>Architecture</span><i>✳</i><span>Interiors</span><i>✳</i><span>Spatial identity</span><i>✳</i><span>Objects & atmosphere</span><i>✳</i></div>
         </div>
 
         <section className="intro section-wrap" id="studio">
