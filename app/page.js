@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <StudioExperience>
       <Navbar />
-      <main>
+      <main id="main-content">
         <section className="hero" id="home">
           <div className="hero__image" aria-hidden="true" />
           <video className="hero__video" autoPlay muted loop playsInline preload="metadata" poster="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90" aria-hidden="true">
