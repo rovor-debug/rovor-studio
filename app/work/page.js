@@ -7,6 +7,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/projects";
 
 export const metadata = {
+  alternates: { canonical: "/work" },
   title: "Selected Work",
   description: "Explore architectural concepts, spatial studies, and material research by ROVOR Architecture Studio.",
 };
