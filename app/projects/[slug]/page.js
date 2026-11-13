@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }) {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="project-detail">
+      <main id="main-content" className="project-detail">
         <section className="project-detail__hero">
           <div className="project-detail__hero-image" style={{ backgroundImage: `url("${project.image}")` }} />
           <div className="project-detail__hero-veil" />
