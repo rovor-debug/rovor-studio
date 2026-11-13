@@ -4,11 +4,11 @@ An editorial portfolio for ROVOR, an independent architecture and spatial design
 
 ## Routes
 
-- `/` — Home and studio introduction
-- `/studio` — Studio profile, principles, and process
+- `/` — Editorial homepage and studio introduction
+- `/studio` — Studio profile, principles, services, and process
 - `/work` — Selected work index
-- `/projects/[slug]` — Individual architectural case studies
-- `/contact` — Project enquiry page
+- `/projects/[slug]` — Individual architectural concept studies
+- `/contact` — Project enquiries
 
 ## Local development
 
@@ -26,19 +26,22 @@ npm run build
 npm run start
 ```
 
-A GitHub Actions workflow runs the production build for pull requests and pushes to the main branch.
+GitHub Actions runs a production build for pull requests and pushes to `main`. Vercel creates preview deployments for feature branches and production deployments from `main`.
 
-## Deployment
+## Search and sharing
 
-The project is connected to Vercel through GitHub. Confirm the production domain in Vercel and configure it before publishing canonical URLs or a sitemap.
+- Canonical URL and sitemap use `NEXT_PUBLIC_SITE_URL`, defaulting to the verified Vercel project domain.
+- Open Graph and Twitter metadata use the ROVOR share image.
+- `robots.txt` references the generated `sitemap.xml`.
 
-## Content and editorial notes
+## Content status before a public marketing launch
 
-- Current portfolio entries are explicitly labeled concept studies or visual research.
-- Architectural diagrams are illustrative, conceptual, and not to scale. They are not measured plans, sections, or construction documents.
-- Replace placeholder imagery and concept descriptions with approved ROVOR project photography and verified project information before public launch.
-- Add verified social links and any required legal/business details before launch.
-- Review desktop, tablet, and mobile layouts after deployment.
+- Current portfolio entries are clearly identified as concept studies or visual research; they are not presented as completed commissions.
+- Concept diagrams are illustrative and not to scale; they are not measured plans, sections, or construction documents.
+- Current architectural imagery and the hero video are editorial placeholders. Replace them with approved ROVOR-owned or licensed project assets.
+- Confirm the public contact email and add verified social links only when those accounts are ready.
+- Add legal/business details and a privacy notice if the studio begins collecting personal data or using analytics/marketing tools.
+- Confirm the final custom domain and set `NEXT_PUBLIC_SITE_URL` to that domain before launch.
 
 ## Stack
 
