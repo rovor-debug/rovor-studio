@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171717"/><stop offset="1" stop-color="#080808"/></linearGradient></defs>
   <rect width="1200" height="630" fill="url(#g)"/>
-  <circle cx="600" cy="260" r="175" fill="none" stroke="#B08D57" stroke-width="2"/>
   <path d="M525 155H625C665 155 687 180 687 218C687 255 660 282 622 282H607M525 202V388M570 268L675 388" fill="none" stroke="#B08D57" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
   <text x="600" y="485" text-anchor="middle" fill="#EDEBE5" font-family="Arial,sans-serif" font-size="66" letter-spacing="24">ROVOR</text>
   <text x="600" y="530" text-anchor="middle" fill="#B08D57" font-family="Arial,sans-serif" font-size="18" letter-spacing="10">ARCHITECTURE STUDIO</text>

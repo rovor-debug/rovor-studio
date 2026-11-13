@@ -5,6 +5,7 @@ import StudioExperience from "@/components/StudioExperience";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
+  alternates: { canonical: "/studio" },
   title: "The Studio",
   description: "Discover ROVOR's architectural point of view, design principles, and approach to creating thoughtful spaces.",
 };
@@ -25,14 +26,14 @@ export default function StudioPage() {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="studio-page">
+      <main id="main-content" className="studio-page">
         <section className="studio-hero">
           <div className="studio-hero__image" />
           <div className="studio-hero__veil" />
           <div className="studio-hero__content">
             <p className="eyebrow">ROVOR / The studio</p>
             <h1>Architecture<br />with <em>intention.</em></h1>
-            <p>We shape spaces through a considered relationship between context, material, proportion, and light.</p>
+            <p>An independent architecture practice focused on residential space, interior environments, and material-led design exploration.</p>
           </div>
           <span className="studio-hero__index">A POINT OF VIEW / 01</span>
         </section>
@@ -42,8 +43,8 @@ export default function StudioPage() {
           <div className="studio-manifesto__grid">
             <Reveal><p className="intro__overline">An independent architecture & spatial design studio</p><h2>Design is not an image.<br />It is an experience that<br /><em>stays with you.</em></h2></Reveal>
             <Reveal delay={120}>
-              <p>ROVOR is an independent architecture and spatial design practice exploring how spaces can feel clear, grounded, and enduring. We work across scales, from architectural concepts to interior environments, with an emphasis on the relationship between people and place.</p>
-              <p>Our approach is research-led and detail-conscious. Rather than following a fixed style, we seek the character already present in each brief and give it a precise spatial expression.</p>
+              <p>ROVOR is an independent architecture and spatial design practice exploring how spaces can feel clear, grounded, and enduring. Our focus is residential architecture, interior environments, spatial concepts, and visual communication. Each study begins with the relationship between people, place, and the qualities of everyday life.</p>
+              <p>Our approach is research-led and detail-conscious. Rather than following a fixed style, we look for the central idea in each brief and give it a clear spatial expression.</p>
             </Reveal>
           </div>
         </section>

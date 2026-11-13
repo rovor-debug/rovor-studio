@@ -17,6 +17,7 @@ export async function generateMetadata({ params }) {
   return {
     title: project ? project.title : "Selected Work",
     description: project?.description || "Selected architecture work by ROVOR Studio.",
+    alternates: project ? { canonical: `/projects/${project.slug}` } : undefined,
     openGraph: project ? { title: `${project.title} — ROVOR`, description: project.description, images: [project.image] } : undefined,
   };
 }
@@ -32,7 +33,7 @@ export default async function ProjectPage({ params }) {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="project-detail">
+      <main id="main-content" className="project-detail">
         <section className="project-detail__hero">
           <div className="project-detail__hero-image" style={{ backgroundImage: `url("${project.image}")` }} />
           <div className="project-detail__hero-veil" />

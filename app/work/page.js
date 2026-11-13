@@ -7,6 +7,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/projects";
 
 export const metadata = {
+  alternates: { canonical: "/work" },
   title: "Selected Work",
   description: "Explore architectural concepts, spatial studies, and material research by ROVOR Architecture Studio.",
 };
@@ -15,7 +16,7 @@ export default function WorkPage() {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="work-page">
+      <main id="main-content" className="work-page">
         <section className="work-page__intro section-wrap">
           <p className="eyebrow">ROVOR / Selected work</p>
           <h1>Ideas taking<br /><em>form.</em></h1>
