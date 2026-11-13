@@ -35,7 +35,7 @@ export default function ContactPage() {
           <div>
             <span>Follow & connect</span>
             <a href={instagram} target="_blank" rel="noreferrer">Instagram ↗</a>
-            <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn · Founder ↗</a>
+            <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn · Personal ↗</a>
           </div>
           <div>
             <span>What to include</span>
