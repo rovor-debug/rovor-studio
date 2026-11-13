@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
 
 :root {
-  --paper:#f1f0eb; --ink:#171916; --muted:#777970; --line:rgba(23,25,22,.18);
-  --accent:#B08D57; --dark:#171916; --serif:"Playfair Display",Georgia,serif;
+  --paper:#F5F5F2; --ink:#111111; --muted:#707070; --line:rgba(17,17,17,.18);
+  --accent:#B08D57; --dark:#111111; --serif:"Playfair Display",Georgia,serif;
   --sans:"Manrope","DM Sans",Arial,sans-serif; --mono:"DM Mono",monospace;
   --ease:cubic-bezier(.2,.75,.2,1);
 }
@@ -410,17 +410,17 @@ button,input{font:inherit}
 
 /* ROVOR — refined bronze identity */
 .logo-mark{display:inline-flex;align-items:center;gap:10px;color:#B08D57;white-space:nowrap}
-.logo-mark__symbol{display:block;width:36px;height:36px;flex:none;overflow:visible}
+.logo-mark__symbol{display:block;width:32px;height:36px;flex:none;overflow:visible}
 .logo-mark__type{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
 .wordmark,.footer__brand{font-family:var(--sans);font-size:25px;font-weight:500;letter-spacing:.22em;line-height:1;color:#B08D57}
 .logo-mark__letters{display:inline-flex;gap:0}
 .logo-mark__letter{font:500 25px/.9 var(--sans);letter-spacing:.22em;color:inherit;transition:opacity .3s,transform .5s var(--ease)}
 .logo-mark__descriptor{font:7px/1 var(--mono);letter-spacing:.19em;color:currentColor;opacity:.78}
 .logo-mark:hover .logo-mark__letter{transform:translateY(-2px);color:inherit;opacity:.72}
-.footer__brand .logo-mark__symbol{width:43px;height:43px}
+.footer__brand .logo-mark__symbol{width:37px;height:43px}
 .footer__brand .logo-mark__letter{font-size:29px}
 .intro-loader__wordmark{font-weight:500;letter-spacing:.2em;color:#B08D57}
-@media(max-width:680px){.wordmark{font-size:22px}.logo-mark__symbol{width:32px;height:32px}.logo-mark__letter{font-size:22px}.logo-mark__descriptor{font-size:6px}}
+@media(max-width:680px){.wordmark{font-size:22px}.logo-mark__symbol{width:27px;height:32px}.logo-mark__letter{font-size:22px}.logo-mark__descriptor{font-size:6px}}
 
 /* Accessibility and keyboard navigation */
 .skip-link{position:fixed;z-index:100;top:12px;left:12px;padding:12px 16px;background:#B08D57;color:#171916;font:600 12px var(--sans);transform:translateY(-160%);transition:transform .2s}
