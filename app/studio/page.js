@@ -25,7 +25,7 @@ export default function StudioPage() {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="studio-page">
+      <main id="main-content" className="studio-page">
         <section className="studio-hero">
           <div className="studio-hero__image" />
           <div className="studio-hero__veil" />
