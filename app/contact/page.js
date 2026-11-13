@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="contact-page">
+      <main id="main-content" className="contact-page">
         <section className="contact-page__hero section-wrap">
           <p className="eyebrow">ROVOR / Contact</p>
           <h1>Every good project<br />starts with a <em>conversation.</em></h1>
