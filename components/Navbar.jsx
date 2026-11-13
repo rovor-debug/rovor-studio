@@ -27,6 +27,7 @@ export default function Navbar() {
         <nav id="primary-navigation" aria-label="Primary navigation" className={open ? "nav-links nav-links--open" : "nav-links"}>
           <Link href="/studio" onClick={closeMenu}>Studio</Link>
           <Link href="/work" onClick={closeMenu}>Work</Link>
+          <Link href="/#films" onClick={closeMenu}>Films</Link>
           <Link href="/contact" onClick={closeMenu}>Contact</Link>
         </nav>
         <span className="navbar__meta">Architecture / Spatial Design</span>
