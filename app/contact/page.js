@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import StudioExperience from "@/components/StudioExperience";
 
 export const metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description: "Contact ROVOR Architecture Studio about architectural design, spatial projects, and collaborations.",
 };
