@@ -15,7 +15,7 @@ export default function WorkPage() {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="work-page">
+      <main id="main-content" className="work-page">
         <section className="work-page__intro section-wrap">
           <p className="eyebrow">ROVOR / Selected work</p>
           <h1>Ideas taking<br /><em>form.</em></h1>
