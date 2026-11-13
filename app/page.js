@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import StudioExperience from "@/components/StudioExperience";
 import Reveal from "@/components/Reveal";
 import { projects } from "@/lib/projects";
+import FilmSection from "@/components/FilmSection";
 
 const services = [
   ["01", "Architecture", "Residential, cultural and commercial spaces shaped by context."],
@@ -72,6 +73,8 @@ export default function Home() {
           <div className="manifesto__bottom"><p>Architecture is experienced over time. In the way light moves, materials age, and people make a place their own.</p><span>ROVOR STUDIO — 2026</span></div>
           <div className="manifesto__orb" aria-hidden="true" />
         </section>
+
+        <FilmSection />
 
         <section className="services section-wrap" id="expertise">
           <div className="section-heading services__heading">
