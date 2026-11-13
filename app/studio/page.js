@@ -5,6 +5,7 @@ import StudioExperience from "@/components/StudioExperience";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
+  alternates: { canonical: "/studio" },
   title: "The Studio",
   description: "Discover ROVOR's architectural point of view, design principles, and approach to creating thoughtful spaces.",
 };
