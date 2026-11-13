@@ -440,3 +440,34 @@ button,input{font:inherit}
 @media(max-width:680px) {
   .footer__socials { grid-column:1/-1; flex-wrap:wrap; }
 }
+
+/* ROVOR — future-ready film showcase */
+.films { padding:clamp(105px,13vw,170px) 0; background:#1b1e19; color:#f5f5f2; }
+.films__heading { display:flex; justify-content:space-between; align-items:end; gap:35px; margin-bottom:65px; }
+.films .section-kicker { color:rgba(245,245,242,.55); }
+.films .section-title { margin-top:42px; }
+.films .section-title em { color:var(--accent); }
+.films .section-heading__aside { color:rgba(245,245,242,.55); }
+.films__stage { position:relative; width:100%; aspect-ratio:16/9; min-height:280px; overflow:hidden; background:#252922; border:1px solid rgba(176,141,87,.35); }
+.films__placeholder { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(20px,4vw,48px); background:radial-gradient(ellipse at 52% 45%,rgba(176,141,87,.13),transparent 42%),linear-gradient(135deg,#292c25,#151713 72%); }
+.films__index,.films__duration,.films__status,.films__foot { font:8px var(--mono); letter-spacing:.14em; color:rgba(245,245,242,.55); }
+.films__placeholder-mark { position:absolute; left:50%; top:48%; width:90px; height:90px; transform:translate(-50%,-50%); border:1px solid rgba(176,141,87,.55); border-radius:50%; display:grid; place-items:center; }
+.films__placeholder-mark:before { content:""; position:absolute; inset:9px; border:1px solid rgba(176,141,87,.25); border-radius:50%; }
+.films__placeholder-mark span { position:absolute; width:1px; height:34px; background:var(--accent); transform:rotate(45deg); }
+.films__placeholder-mark span:nth-child(2) { transform:rotate(-45deg); }
+.films__placeholder-mark span:nth-child(3) { width:24px; height:1px; transform:rotate(0); }
+.films__placeholder-copy { position:absolute; left:clamp(20px,4vw,48px); bottom:clamp(20px,4vw,48px); }
+.films__status { color:var(--accent); }
+.films__placeholder-copy p { margin:12px 0 0; font:italic clamp(20px,3vw,34px) var(--serif); color:#f5f5f2; }
+.films__duration { position:absolute; right:clamp(20px,4vw,48px); bottom:clamp(20px,4vw,48px); }
+.films__video { display:block; width:100%; height:100%; object-fit:cover; background:#111; }
+.films__foot { display:flex; justify-content:space-between; gap:20px; padding-top:17px; border-top:1px solid rgba(245,245,242,.18); margin-top:18px; }
+@media(max-width:680px) {
+ .films { padding:90px 0; }
+ .films__heading { display:block; margin-bottom:38px; }
+ .films .section-title { font-size:clamp(54px,13vw,78px); }
+ .films__stage { aspect-ratio:4/3; min-height:260px; }
+ .films__placeholder-mark { width:72px; height:72px; }
+ .films__foot { display:block; line-height:2; font-size:7px; }
+ .films__foot span { display:block; }
+}
