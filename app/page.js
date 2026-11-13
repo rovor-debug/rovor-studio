@@ -23,7 +23,7 @@ export default function Home() {
             <source src="https://videos.pexels.com/video-files/6076828/6076828-uhd_3840_2160_30fps.mp4" type="video/mp4" />
           </video>
           <div className="hero__veil" />
-          <div className="hero__topline"><span>Independent architecture studio</span><span>Available for select collaborations · 2026</span></div>
+          <div className="hero__topline"><span>Independent architecture studio</span><span>Independent practice · Concept & collaboration</span></div>
           <div className="hero__content">
             <p className="eyebrow hero__eyebrow">ROVOR / Architecture & spatial design</p>
             <h1>Space<br /><em>with a point</em><br />of view<span className="hero__period">.</span></h1>
@@ -32,7 +32,7 @@ export default function Home() {
               <a className="hero__link" href="#work"><span>Explore selected work</span><b>↘</b></a>
             </div>
           </div>
-          <div className="hero__vertical">DESIGNING WHAT MATTERS — SINCE 2024</div>
+          <div className="hero__vertical">SPACE / MATERIAL / LIGHT</div>
           <span className="hero__index">01 / 04</span>
           <a className="hero__scroll" href="#studio"><span>Scroll to discover</span><i /></a>
         </section>
@@ -57,12 +57,12 @@ export default function Home() {
         <section className="work section-wrap" id="work">
           <div className="section-heading">
             <div><div className="section-kicker"><span>02</span><span>Selected work</span><i /></div><h2 className="section-title">Spaces that<br /><em>stay with you.</em></h2></div>
-            <p className="section-heading__aside">A selection of explorations<br />in space, light and material.<br /><span>2024 — 2026</span></p>
+            <p className="section-heading__aside">A curated selection of<br />architectural concept studies<br /><span>SPACE / LIGHT / MATERIAL</span></p>
           </div>
           <div className="project-grid">
             {projects.map((project, index) => <Reveal key={project.slug} delay={index * 100} className={index === 0 ? "project-reveal project-reveal--large" : "project-reveal"}><ProjectCard project={{...project, className: index === 0 ? "project-card--wide" : ""}} /></Reveal>)}
           </div>
-          <div className="work__foot"><span>01 — 03 / Selected studies</span><a className="text-link" href="#contact">Discuss a project <span>↗</span></a></div>
+          <div className="work__foot"><span>01 — 03 / Concept studies</span><a className="text-link" href="#contact">Discuss a project <span>↗</span></a></div>
         </section>
 
         <section className="manifesto" id="approach">
