@@ -34,6 +34,18 @@ GitHub Actions runs a production build for pull requests and pushes to `main`. V
 - Open Graph and Twitter metadata use the ROVOR share image.
 - `robots.txt` references the generated `sitemap.xml`.
 
+## Adding a film later
+
+The homepage includes a dedicated **Films / Moving Image** section. To publish a film:
+
+1. Add the approved video file under `public/films/` (MP4 / H.264 is recommended for broad browser support).
+2. Add a poster image under `public/images/` (JPG, WebP, or AVIF).
+3. Open `components/FilmSection.jsx` and set `FILM_SOURCE` to the video path, for example `/films/rovor-film-001.mp4`.
+4. Set `FILM_POSTER` to the poster path, for example `/images/rovor-film-001-poster.webp`.
+5. Commit the assets and component update to the feature branch; verify the Preview before merging.
+
+Keep the current placeholder state until an approved film and poster are available. Optimize video files for web delivery and use licensed or ROVOR-owned material.
+
 ## Content status before a public marketing launch
 
 - Current portfolio entries are clearly identified as concept studies or visual research; they are not presented as completed commissions.
