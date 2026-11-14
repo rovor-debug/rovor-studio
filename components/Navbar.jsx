@@ -25,6 +25,7 @@ export default function Navbar() {
           <span>{open ? "Close" : "Menu"}</span><i aria-hidden="true" />
         </button>
         <nav id="primary-navigation" aria-label="Primary navigation" className={open ? "nav-links nav-links--open" : "nav-links"}>
+          <Link href="/" onClick={closeMenu}>Home</Link>
           <Link href="/studio" onClick={closeMenu}>Studio</Link>
           <Link href="/work" onClick={closeMenu}>Work</Link>
           <Link href="/#films" onClick={closeMenu}>Films</Link>
