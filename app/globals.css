@@ -501,3 +501,39 @@ button,input{font:inherit}
 .enquiry-form__message--error{color:#d69a8d}
 .enquiry-form__message a{display:inline-block;margin-left:8px;text-decoration:underline}
 @media(max-width:760px){.enquiry{padding-top:70px;padding-bottom:75px}.enquiry__intro{display:block;margin:40px 0}.enquiry__intro p{margin-top:25px}.enquiry-form{margin-left:0}.enquiry-form__grid{grid-template-columns:1fr;gap:23px}.enquiry-form__submit{display:block}.enquiry-form__submit button{margin-top:22px;width:100%}}
+
+
+/* ROVOR — original interactive architectural 3D study */
+.spatial-object{padding-top:40px;padding-bottom:150px;overflow:hidden}
+.spatial-object__layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:7vw;align-items:center;margin:70px 0 0 8%}
+.spatial-object__copy{position:relative;z-index:2}
+.spatial-object__copy .eyebrow{color:#9a784a;margin:0 0 28px}
+.spatial-object__copy h2{font-size:clamp(48px,6.2vw,86px);font-weight:500;line-height:.98;letter-spacing:-.085em;margin:0}
+.spatial-object__copy h2 em{font:italic 500 .86em var(--serif);color:#9a784a}
+.spatial-object__description{max-width:310px;margin:28px 0 42px;color:#686960;font-size:12px;line-height:2}
+.spatial-object__meta{display:flex;justify-content:space-between;gap:20px;padding-top:15px;border-top:1px solid var(--line);font:8px var(--mono);letter-spacing:.1em;color:#85877d}
+.spatial-object__stage{position:relative;min-height:570px;overflow:hidden;background:radial-gradient(ellipse at 50% 42%,#45463e 0,#292b26 48%,#1b1d19 100%);border:1px solid rgba(17,17,17,.08);touch-action:pan-y;isolation:isolate}
+.spatial-object__stage:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.07),transparent 35%,rgba(0,0,0,.15));pointer-events:none}
+.spatial-object__stage-label,.spatial-object__stage-foot{position:absolute;z-index:5;left:26px;right:26px;display:flex;justify-content:space-between;gap:15px;font:8px var(--mono);letter-spacing:.12em;color:rgba(245,245,242,.56)}
+.spatial-object__stage-label{top:24px}.spatial-object__stage-foot{bottom:22px;color:rgba(245,245,242,.46)}
+.spatial-object__ground-grid{position:absolute;z-index:0;left:-20%;right:-20%;height:90%;bottom:-40%;transform:perspective(500px) rotateX(65deg);transform-origin:center top;background-image:linear-gradient(rgba(210,204,187,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(210,204,187,.11) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(transparent,#000 25%,#000 80%,transparent)}
+.spatial-object__model-wrap{position:absolute;z-index:2;left:50%;top:51%;width:min(70%,510px);aspect-ratio:1.1;transform:translate(-50%,-50%);perspective:1000px}
+.spatial-object__model{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(var(--model-x)) rotateY(var(--model-y));transition:transform .22s ease-out;animation:spatial-float 7s ease-in-out infinite}
+.spatial-object__base{position:absolute;width:100%;height:72%;left:0;top:20%;background:linear-gradient(145deg,#a8a69a,#77786f 60%,#565950);transform:rotateX(90deg) translateZ(-88px);box-shadow:0 35px 55px rgba(0,0,0,.38)}
+.spatial-object__plinth{position:absolute;left:9%;top:63%;width:82%;height:17%;background:linear-gradient(160deg,#77786f,#3d403a);transform:translateZ(-35px);box-shadow:0 20px 28px rgba(0,0,0,.28)}
+.spatial-object__roof{position:absolute;left:5%;top:13%;width:90%;height:13%;background:linear-gradient(145deg,#d0cabb,#8c8c80 72%);transform:translateZ(76px);box-shadow:0 15px 28px rgba(0,0,0,.2)}
+.spatial-object__roof-edge{position:absolute;left:5%;top:24%;width:90%;height:3%;background:#77776c;transform:translateZ(77px)}
+.spatial-object__wall{position:absolute;background:linear-gradient(135deg,#77796f,#42463f);transform-style:preserve-3d}
+.spatial-object__wall--back{left:14%;top:27%;width:70%;height:38%;transform:translateZ(-28px);background:linear-gradient(90deg,#55594f,#77796e)}
+.spatial-object__wall--side{right:14%;top:27%;width:16%;height:38%;transform:rotateY(90deg) translateZ(-38px);transform-origin:right center;background:linear-gradient(180deg,#77786d,#343831)}
+.spatial-object__glass{position:absolute;top:29%;height:34%;background:linear-gradient(135deg,rgba(184,198,190,.48),rgba(91,117,111,.12));border:1px solid rgba(221,221,205,.56);box-shadow:inset 0 0 24px rgba(211,221,208,.12);backdrop-filter:blur(1px)}
+.spatial-object__glass--left{left:17%;width:34%;transform:translateZ(48px)}
+.spatial-object__glass--right{right:17%;width:30%;transform:translateZ(48px);background:linear-gradient(145deg,rgba(176,141,87,.24),rgba(114,135,124,.12))}
+.spatial-object__column{position:absolute;top:26%;width:2.3%;height:44%;background:linear-gradient(90deg,#b9b4a4,#686a60 65%,#343831);transform:translateZ(82px);box-shadow:3px 0 8px rgba(0,0,0,.16)}
+.spatial-object__column--one{left:15%}.spatial-object__column--two{left:49%}.spatial-object__column--three{right:15%}
+.spatial-object__core{position:absolute;left:42%;top:34%;width:17%;height:29%;background:linear-gradient(120deg,#a28a66,#655b49);transform:translateZ(12px);box-shadow:8px 10px 22px rgba(0,0,0,.25)}
+.spatial-object__shadow{position:absolute;left:2%;right:-10%;height:22%;bottom:0;background:rgba(0,0,0,.42);filter:blur(22px);transform:rotateX(90deg) translateZ(-115px);border-radius:50%}
+@keyframes spatial-float{0%,100%{translate:0 0}50%{translate:0 -9px}}
+@media(max-width:900px){.spatial-object__layout{grid-template-columns:1fr;gap:45px;margin-left:0}.spatial-object__copy{max-width:600px}.spatial-object__stage{min-height:520px}.spatial-object__description{max-width:440px}}
+@media(max-width:600px){.spatial-object{padding-top:10px;padding-bottom:90px}.spatial-object__layout{margin-top:45px}.spatial-object__copy h2{font-size:58px}.spatial-object__stage{min-height:390px}.spatial-object__model-wrap{width:88%;top:52%}.spatial-object__stage-label,.spatial-object__stage-foot{left:14px;right:14px;font-size:7px}.spatial-object__stage-label{top:16px}.spatial-object__stage-foot{bottom:15px}}
+@media(prefers-reduced-motion:reduce){.spatial-object__model{animation:none;transition:none}}

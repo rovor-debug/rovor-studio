@@ -5,6 +5,7 @@ import StudioExperience from "@/components/StudioExperience";
 import Reveal from "@/components/Reveal";
 import { projects } from "@/lib/projects";
 import FilmSection from "@/components/FilmSection";
+import SpatialObject from "@/components/SpatialObject";
 
 const services = [
   ["01", "Architecture", "Residential, cultural and commercial spaces shaped by context."],
@@ -51,6 +52,8 @@ export default function Home() {
           </div>
           <div className="intro__graphic" aria-hidden="true"><span>R</span><i /><b>FORM FOLLOWS FEELING</b></div>
         </section>
+
+        <SpatialObject />
 
         <section className="work section-wrap" id="work">
           <div className="section-heading">
