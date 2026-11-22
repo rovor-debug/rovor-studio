@@ -16,11 +16,11 @@ export default function PersianHome() {
           <div className="hero__image" aria-hidden="true" /><div className="hero__veil" />
           <div className="hero__topline"><span>مستقر در ایران</span><span>استودیوی مستقل · همکاری در سراسر جهان</span></div>
           <div className="hero__content">
-            <p className="eyebrow hero__eyebrow">ROVOR / معماری و طراحی فضا</p>
-            <h1>فضا،<br /><em>با نگاهی</em><br />متفاوت<span className="hero__period">.</span></h1>
+            <p className="eyebrow hero__eyebrow">معماری · طراحی · فضا</p>
+            <h1>شکل‌دهی به<br /><em>فضاهایی بهتر</em><span className="hero__period">.</span></h1>
             <div className="hero__bottom">
-              <p>فضاهایی سنجیده و معنادار خلق می‌کنیم؛ ریشه‌گرفته از بستر، شکل‌گرفته با ماده و زنده در نور.</p>
-              <a className="hero__link" href="#work"><span>مشاهده آثار منتخب</span><b>↙</b></a>
+              <p>استودیوی ROVOR معماری ماندگاری برای فردایی آگاهانه‌تر خلق می‌کند.</p>
+              <a className="hero__link" href="#work"><span>مشاهده آثار ما</span><b>←</b></a>
             </div>
           </div>
           <div className="hero__vertical">فضا / ماده / نور</div><span className="hero__index">۰۱ / ۰۴</span>

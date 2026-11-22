@@ -24,11 +24,11 @@ export default function Home() {
           <div className="hero__veil" />
           <div className="hero__topline"><span>Based in Iran</span><span>Independent practice · Working worldwide</span></div>
           <div className="hero__content">
-            <p className="eyebrow hero__eyebrow">ROVOR / Architecture & spatial design</p>
-            <h1>Space<br /><em>with a point</em><br />of view<span className="hero__period">.</span></h1>
+            <p className="eyebrow hero__eyebrow">ARCHITECTURE · DESIGN · SPACE</p>
+            <h1>Shaping Better<br /><em>Spaces</em><span className="hero__period">.</span></h1>
             <div className="hero__bottom">
-              <p>We create considered spaces with a distinct point of view — grounded in context, shaped by material, and alive with light.</p>
-              <a className="hero__link" href="#work"><span>Explore selected work</span><b>↘</b></a>
+              <p>ROVOR Studio creates timeless architecture for a more thoughtful tomorrow.</p>
+              <a className="hero__link" href="#work"><span>Explore Our Work</span><b>→</b></a>
             </div>
           </div>
           <div className="hero__vertical">SPACE / MATERIAL / LIGHT</div>
