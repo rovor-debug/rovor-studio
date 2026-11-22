@@ -11,7 +11,7 @@ export default function Navbar() {
   const isFa = pathname === "/fa" || pathname.startsWith("/fa/");
   const prefix = isFa ? "/fa" : "";
   const englishPath = pathname.replace(/^\/fa(?=\/|$)/, "") || "/";
-  const languageHref = isFa ? (englishPath.startsWith("/projects/") ? "/work" : englishPath) : (pathname === "/" ? "/fa" : pathname.startsWith("/projects/") ? "/fa/work" : `/fa${pathname}`);
+  const languageHref = isFa ? englishPath : (pathname === "/" ? "/fa" : `/fa${pathname}`);
   const closeMenu = () => setOpen(false);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function Navbar() {
         <button className="menu-toggle" type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-controls="primary-navigation" aria-label={open ? (isFa ? "بستن منو" : "Close navigation menu") : (isFa ? "باز کردن منو" : "Open navigation menu")}>
           <span>{open ? (isFa ? "بستن" : "Close") : (isFa ? "منو" : "Menu")}</span><i aria-hidden="true" />
         </button>
-        <nav id="primary-navigation" aria-label="Primary navigation" className={open ? "nav-links nav-links--open" : "nav-links"}>
+        <nav id="primary-navigation" aria-label={isFa ? "ناوبری اصلی" : "Primary navigation"} className={open ? "nav-links nav-links--open" : "nav-links"}>
           {links.map(([label, href]) => <Link key={href} href={href} onClick={closeMenu}>{label}</Link>)}
         </nav>
         <Link className="language-switch" href={languageHref} aria-label={isFa ? "Switch to English" : "تغییر زبان به فارسی"}>{isFa ? "EN" : "فا"}</Link>

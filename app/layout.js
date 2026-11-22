@@ -1,4 +1,5 @@
 import "./globals.css";
+import { headers } from "next/headers";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rovor-studio.vercel.app";
 
@@ -40,9 +41,11 @@ export const viewport = {
   colorScheme: "dark light",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const requestHeaders = await headers();
+  const locale = requestHeaders.get("x-rovor-locale") === "fa" ? "fa" : "en";
   return (
-    <html lang="en">
+    <html lang={locale} dir={locale === "fa" ? "rtl" : "ltr"}>
       <body>{children}</body>
     </html>
   );
