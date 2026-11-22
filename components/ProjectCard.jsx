@@ -1,10 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import ProjectImage from "@/components/ProjectImage";
 
 export default function ProjectCard({ project }) {
   return (
     <article className={`project-card ${project.className || ""}`}>
       <Link className="project-card__image-wrap" href={`/projects/${project.slug}`} aria-label={`View ${project.title}`}>
-        <img src={project.image} alt={`${project.title} — architectural project`} className="project-card__image" loading="lazy" />
+        <ProjectImage
+          src={project.image}
+          alt={project.imageAlt || `${project.title} — architectural concept study`}
+          className="project-card__image"
+          sizes="(max-width: 760px) 100vw, 50vw"
+        />
         <span className="project-card__arrow">↗</span>
         <span className="project-card__view">View project</span>
       </Link>

@@ -2,8 +2,15 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StudioExperience from "@/components/StudioExperience";
+import ProjectEnquiryForm from "@/components/ProjectEnquiryForm";
+
+const email = "Gp.rovor@gmail.com";
+const whatsapp = "989114710094";
+const instagram = "https://instagram.com/rovor__architecture_studio";
+const linkedin = "https://www.linkedin.com/in/asro4";
 
 export const metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description: "Contact ROVOR Architecture Studio about architectural design, spatial projects, and collaborations.",
 };
@@ -14,15 +21,35 @@ export default function ContactPage() {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="contact-page">
+      <main id="main-content" className="contact-page">
         <section className="contact-page__hero section-wrap">
           <p className="eyebrow">ROVOR / Contact</p>
           <h1>Every good project<br />starts with a <em>conversation.</em></h1>
-          <p className="contact-page__intro">For collaborations, architectural enquiries, and thoughtful conversations, get in touch.</p>
+          <p className="contact-page__intro">Based in Iran and working worldwide, ROVOR welcomes architectural enquiries, remote collaborations, and thoughtful conversations across borders.</p>
+        </section>
+        <section className="enquiry section-wrap" aria-labelledby="enquiry-title">
+          <div className="section-kicker"><span>01</span><span>Project enquiry</span></div>
+          <div className="enquiry__intro">
+            <h2 id="enquiry-title">Tell us about<br /><em>your project.</em></h2>
+            <p>Share a few details to help us understand your brief. The enquiry form is prepared, but email delivery will be enabled once the studio’s secure sending credentials are configured.</p>
+          </div>
+          <ProjectEnquiryForm />
         </section>
         <section className="contact-page__details section-wrap">
-          <div><span>Direct enquiries</span><a href={`mailto:Gp.rovor@gmail.com?subject=${subject}&body=${body}`}>Gp.rovor@gmail.com ↗</a></div>
-          <div><span>What to include</span><p>A short description of your project, its location, the type of support you are looking for, and your anticipated timeline.</p></div>
+          <div>
+            <span>Direct enquiries</span>
+            <a href={`mailto:${email}?subject=${subject}&body=${body}`}>{email} ↗</a>
+            <a href={`https://wa.me/${whatsapp}?text=${encodeURIComponent("Hello ROVOR, I would like to discuss a project.")}`} target="_blank" rel="noreferrer">WhatsApp ↗</a>
+          </div>
+          <div>
+            <span>Follow & connect</span>
+            <a href={instagram} target="_blank" rel="noreferrer">Instagram ↗</a>
+            <a href={linkedin} target="_blank" rel="noreferrer">LinkedIn · Personal ↗</a>
+          </div>
+          <div>
+            <span>What to include</span>
+            <p>A short description of your project, its location, the type of support you are looking for, and your anticipated timeline.</p>
+          </div>
         </section>
         <section className="contact-page__closing section-wrap">
           <span>ROVOR / ARCHITECTURE & SPATIAL DESIGN</span>

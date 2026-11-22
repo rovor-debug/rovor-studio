@@ -6,6 +6,7 @@ import StudioExperience from "@/components/StudioExperience";
 import Reveal from "@/components/Reveal";
 import ConceptDiagram from "@/components/ConceptDiagram";
 import { projects } from "@/lib/projects";
+import ProjectImage from "@/components/ProjectImage";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }) {
   return {
     title: project ? project.title : "Selected Work",
     description: project?.description || "Selected architecture work by ROVOR Studio.",
+    alternates: project ? { canonical: `/projects/${project.slug}`, languages: { en: `/projects/${project.slug}`, fa: `/fa/projects/${project.slug}` } } : undefined,
     openGraph: project ? { title: `${project.title} — ROVOR`, description: project.description, images: [project.image] } : undefined,
   };
 }
@@ -32,9 +34,9 @@ export default async function ProjectPage({ params }) {
   return (
     <StudioExperience>
       <Navbar />
-      <main className="project-detail">
+      <main id="main-content" className="project-detail">
         <section className="project-detail__hero">
-          <div className="project-detail__hero-image" style={{ backgroundImage: `url("${project.image}")` }} />
+          <ProjectImage src={project.image} alt={`${project.title} — architectural concept study`} className="project-detail__hero-image" priority sizes="100vw" />
           <div className="project-detail__hero-veil" />
           <div className="project-detail__hero-content">
             <p className="eyebrow">{project.number} / {project.type}</p>
@@ -87,14 +89,14 @@ export default async function ProjectPage({ params }) {
 
         <section className="project-detail__gallery">
           <Reveal className="project-detail__gallery-main">
-            <img src={project.gallery[0]} alt={`${project.title} — architectural visual study`} />
+            <ProjectImage src={project.gallery[0]} alt={`${project.title} — architectural visual study`} className="project-detail__gallery-image" sizes="(max-width: 760px) 100vw, 82vw" />
           </Reveal>
           <div className="project-detail__gallery-caption">
             <span>04 / Visual studies</span>
             <p>Material, light, and the experience of space.</p>
           </div>
           <Reveal className="project-detail__gallery-secondary" delay={100}>
-            <img src={project.gallery[1]} alt={`${project.title} — material and spatial atmosphere`} />
+            <ProjectImage src={project.gallery[1]} alt={`${project.title} — material and spatial atmosphere`} className="project-detail__gallery-image" sizes="(max-width: 760px) 100vw, 58vw" />
           </Reveal>
         </section>
 

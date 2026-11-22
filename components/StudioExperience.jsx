@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const progression = [
   [73.42, 146.83, 174.61, 220, 261.63, 329.63],
@@ -10,6 +11,8 @@ const progression = [
 ];
 
 export default function StudioExperience({ children }) {
+  const pathname = usePathname();
+  const isFa = (pathname || "").startsWith("/fa");
   const [introVisible, setIntroVisible] = useState(true);
   const [soundOn, setSoundOn] = useState(false);
   const [volume, setVolume] = useState(0.82);
@@ -123,14 +126,14 @@ export default function StudioExperience({ children }) {
         </div>
       </div>
       {children}
-      <div className="sound-dock" aria-label="Soundtrack controls">
-        <button className={soundOn ? "sound-control sound-control--on" : "sound-control"} type="button" onClick={toggleSound} aria-pressed={soundOn} aria-label={soundOn ? "Turn soundtrack off" : "Play soundtrack"}>
+      <div className="sound-dock" aria-label={isFa ? "کنترل موسیقی" : "Soundtrack controls"}>
+        <button className={soundOn ? "sound-control sound-control--on" : "sound-control"} type="button" onClick={toggleSound} aria-pressed={soundOn} aria-label={soundOn ? (isFa ? "خاموش‌کردن موسیقی" : "Turn soundtrack off") : (isFa ? "پخش موسیقی" : "Play soundtrack")}>
           <span className="sound-control__bars" aria-hidden="true"><i /><i /><i /><i /></span>
-          <span>{soundOn ? "Soundtrack on" : "Play soundtrack"}</span>
+          <span>{soundOn ? (isFa ? "موسیقی روشن" : "Soundtrack on") : (isFa ? "پخش موسیقی" : "Play soundtrack")}</span>
         </button>
         <label className="sound-volume">
-          <span>VOL</span>
-          <input aria-label="Soundtrack volume" type="range" min="0" max="1" step="0.01" value={volume} onChange={(event) => changeVolume(event.target.value)} />
+          <span>{isFa ? "صدا" : "VOL"}</span>
+          <input aria-label={isFa ? "بلندی صدا" : "Soundtrack volume"} type="range" min="0" max="1" step="0.01" value={volume} onChange={(event) => changeVolume(event.target.value)} />
         </label>
       </div>
     </>
