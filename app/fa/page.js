@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StudioExperience from "@/components/StudioExperience";
 import SpatialObject from "@/components/SpatialObject";
+import FilmSection from "@/components/FilmSection";
 import { projects } from "@/lib/projects";
 import Link from "next/link";
 
@@ -40,7 +41,9 @@ export default function PersianHome() {
           <div className="work__foot"><span>۰۱ — ۰۳ / مطالعات مفهومی</span><Link className="text-link" href="/fa/work">مشاهده همه آثار <span>↖</span></Link></div>
         </section>
         <section className="manifesto" id="approach"><div className="manifesto__grain" aria-hidden="true" /><div className="manifesto__top"><span>۰۳ / دیدگاه ما</span><span>هیاهوی کمتر. معناى بیشتر.</span></div><div className="manifesto__content"><p className="eyebrow">فلسفه‌ی طراحی</p><h2>نه فقط<br />آنچه <em>می‌بینیم.</em><br />آنچه <em>زندگی می‌کنیم.</em></h2></div><div className="manifesto__bottom"><p>معماری در گذر زمان تجربه می‌شود؛ در حرکت نور، پیرشدن ماده و در شیوه‌ای که انسان‌ها مکانی را از آنِ خود می‌کنند.</p><span>ROVOR STUDIO — ۲۰۲۶</span></div><div className="manifesto__orb" aria-hidden="true" /></section>
+        <FilmSection />
         <section className="services section-wrap"><div className="section-heading"><div><div className="section-kicker"><span>۰۴</span><span>حوزه‌های فعالیت</span><i /></div><h2 className="section-title">ایده تا<br /><em>تجربه.</em></h2></div><p className="section-heading__aside">از نخستین پرسش تا آخرین جزئیات،<br />پیوند میان مفهوم و ساخت.</p></div><div className="service-list">{[["۰۱","معماری","طراحی فضاهای مسکونی، فرهنگی و تجاری با توجه به بستر."],["۰۲","معماری داخلی","فضاهایی با اتمسفر و زبان مادی روشن."],["۰۳","راهبرد فضایی","پژوهش، طراحی مفهومی و هویت فضایی."],["۰۴","تصویرسازی معماری","روایت‌های بصری برای ملموس‌کردن ایده‌ها."]].map(([n,t,d])=><article className="service-row" key={n}><span className="service-row__number">{n}</span><h3>{t}</h3><p>{d}</p><span className="service-row__arrow">↖</span></article>)}</div></section>
+        <section className="approach"><div className="approach__image" role="img" aria-label="مطالعه‌ی نور و ماده در معماری" /><div className="approach__content"><p className="eyebrow">۰۵ / فرایند طراحی</p><h2>وضوح در<br />هر <em>مقیاس.</em></h2><p className="approach__copy">کار دقیق با پرسش‌های بهتر آغاز می‌شود. می‌شنویم، بررسی می‌کنیم، می‌آزماییم و پالایش می‌کنیم تا ایده‌ی اصلی در تمام تصمیم‌ها زنده بماند.</p><Link className="text-link text-link--light" href="/fa/contact">گفتگو را آغاز کنیم <span>↖</span></Link><span className="approach__stamp">مشاهده<br/>تصور<br/>آفرینش</span></div></section>
         <section className="contact section-wrap" id="contact"><div className="section-kicker"><span>۰۵</span><span>شروع گفتگو</span><i /></div><div className="contact__body"><p className="eyebrow">پروژه‌ای در ذهن دارید؟</p><h2>بیایید برای آن<br /><em>فضا بسازیم.</em></h2><div className="contact__action"><Link className="contact__email" href="/fa/contact">درخواست همکاری <span>↖</span></Link><p>برای پروژه‌ها، همکاری‌ها و گفتگوهای حرفه‌ای.</p></div></div><div className="contact__bottom"><span>معماری / طراحی داخلی / طراحی فضا</span><span>مستقر در ایران · فعال در سراسر جهان</span></div></section>
       </main>
       <Footer />

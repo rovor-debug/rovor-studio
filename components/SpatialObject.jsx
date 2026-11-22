@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function SpatialObject() {
   const [rotation, setRotation] = useState({ x: -12, y: -24 });
+  const isFa = (usePathname() || "").startsWith("/fa");
 
   function handlePointerMove(event) {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -19,16 +21,16 @@ export default function SpatialObject() {
 
   return (
     <section className="spatial-object section-wrap" aria-labelledby="spatial-object-title">
-      <div className="section-kicker"><span>02</span><span>Form study / 001</span><i /></div>
+      <div className="section-kicker"><span>02</span><span>{isFa ? "مطالعه‌ی فرم / ۰۰۱" : "Form study / 001"}</span><i /></div>
       <div className="spatial-object__layout">
         <div className="spatial-object__copy">
-          <p className="eyebrow">A study in mass, void & light</p>
-          <h2 id="spatial-object-title">An idea<br />in <em>three dimensions.</em></h2>
-          <p className="spatial-object__description">Architecture begins as a relationship between solid and empty space. This digital pavilion explores a quiet balance of weight, transparency and shadow.</p>
+          <p className="eyebrow">{isFa ? "مطالعه‌ای درباره‌ی جرم، خلأ و نور" : "A study in mass, void & light"}</p>
+          <h2 id="spatial-object-title">{isFa ? <>ایده‌ای<br />در <em>سه بُعد.</em></> : <>An idea<br />in <em>three dimensions.</em></>}</h2>
+          <p className="spatial-object__description">{isFa ? "معماری از رابطه‌ی میان فضای پُر و خالی آغاز می‌شود. این پاویون دیجیتال تعادلی آرام میان وزن، شفافیت و سایه را بررسی می‌کند." : "Architecture begins as a relationship between solid and empty space. This digital pavilion explores a quiet balance of weight, transparency and shadow."}</p>
           <div className="spatial-object__meta"><span>ROVOR / DIGITAL STUDY</span><span>01 — 03</span></div>
         </div>
         <div className="spatial-object__stage" onPointerMove={handlePointerMove} onPointerLeave={resetView} onPointerUp={resetView} role="img" aria-label="Interactive three-dimensional architectural pavilion model made of stone planes and glass walls">
-          <div className="spatial-object__stage-label"><span>INTERACTIVE MODEL</span><span>MOVE TO EXPLORE ↗</span></div>
+          <div className="spatial-object__stage-label"><span>{isFa ? "مدل تعاملی" : "INTERACTIVE MODEL"}</span><span>{isFa ? "برای کاوش حرکت دهید ↗" : "MOVE TO EXPLORE ↗"}</span></div>
           <div className="spatial-object__ground-grid" aria-hidden="true" />
           <div className="spatial-object__model-wrap" style={{ "--model-x": `${rotation.x}deg`, "--model-y": `${rotation.y}deg` }}>
             <div className="spatial-object__model">
@@ -47,7 +49,7 @@ export default function SpatialObject() {
               <div className="spatial-object__shadow" />
             </div>
           </div>
-          <div className="spatial-object__stage-foot"><span>CONCRETE / GLASS / BRONZE</span><span>CONCEPTUAL ARCHITECTURE</span></div>
+          <div className="spatial-object__stage-foot"><span>{isFa ? "بتن / شیشه / برنز" : "CONCRETE / GLASS / BRONZE"}</span><span>{isFa ? "معماری مفهومی" : "CONCEPTUAL ARCHITECTURE"}</span></div>
         </div>
       </div>
     </section>

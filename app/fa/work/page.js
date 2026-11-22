@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 
-export const metadata = { title: "آثار منتخب", description: "مطالعات مفهومی معماری، ایده‌های فضایی و پژوهش ماده در استودیو روور." };
+export const metadata = { title: "آثار منتخب", description: "مطالعات مفهومی معماری، ایده‌های فضایی و پژوهش ماده در استودیو روور.", alternates: { canonical: "/fa/work", languages: { en: "/work", fa: "/fa/work" } } };
 
 export default function PersianWork() {
   const titles = ["خانه بر فراز شیب","حیاط آرام","مطالعه‌ی ماده"];

@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-export const metadata = { title: "استودیو", description: "معرفی رویکرد، اصول طراحی و فرایند کاری استودیو معماری روور." };
+export const metadata = { title: "استودیو", description: "معرفی رویکرد، اصول طراحی و فرایند کاری استودیو معماری روور.", alternates: { canonical: "/fa/studio", languages: { en: "/studio", fa: "/fa/studio" } } };
 
 export default function PersianStudio() {
   return <><Navbar /><main id="main-content" className="studio-page fa-inner">
