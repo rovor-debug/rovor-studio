@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StudioExperience from "@/components/StudioExperience";
+import ProjectEnquiryForm from "@/components/ProjectEnquiryForm";
 
 const email = "Gp.rovor@gmail.com";
 const whatsapp = "989114710094";
@@ -25,6 +26,14 @@ export default function ContactPage() {
           <p className="eyebrow">ROVOR / Contact</p>
           <h1>Every good project<br />starts with a <em>conversation.</em></h1>
           <p className="contact-page__intro">Based in Iran and working worldwide, ROVOR welcomes architectural enquiries, remote collaborations, and thoughtful conversations across borders.</p>
+        </section>
+        <section className="enquiry section-wrap" aria-labelledby="enquiry-title">
+          <div className="section-kicker"><span>01</span><span>Project enquiry</span></div>
+          <div className="enquiry__intro">
+            <h2 id="enquiry-title">Tell us about<br /><em>your project.</em></h2>
+            <p>Share a few details to help us understand your brief. The enquiry form is prepared, but email delivery will be enabled once the studio’s secure sending credentials are configured.</p>
+          </div>
+          <ProjectEnquiryForm />
         </section>
         <section className="contact-page__details section-wrap">
           <div>
