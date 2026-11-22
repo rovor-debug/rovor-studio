@@ -10,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isFa = pathname === "/fa" || pathname.startsWith("/fa/");
   const prefix = isFa ? "/fa" : "";
-  const languageHref = isFa ? (pathname.replace(/^\\/fa(?=\\/|$)/, "") || "/") : (pathname === "/" ? "/fa" : `/fa${pathname}`);
+  const languageHref = isFa ? (pathname.replace(/^\/fa(?=\/|$)/, "") || "/") : (pathname === "/" ? "/fa" : `/fa${pathname}`);
   const closeMenu = () => setOpen(false);
 
   useEffect(() => {
