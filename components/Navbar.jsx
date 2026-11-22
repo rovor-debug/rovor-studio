@@ -10,6 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isFa = pathname === "/fa" || pathname.startsWith("/fa/");
   const prefix = isFa ? "/fa" : "";
+  const languageHref = isFa ? (pathname.replace(/^\\/fa(?=\\/|$)/, "") || "/") : (pathname === "/" ? "/fa" : `/fa${pathname}`);
   const closeMenu = () => setOpen(false);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const links = isFa
-    ? [["استودیو", "/fa/studio"], ["پروژه‌ها", "/fa/work"], ["فیلم", "/fa#films"], ["تماس", "/fa/contact"]]
+    ? [["استودیو", "/fa/studio"], ["پروژه‌ها", "/fa/work"], ["تماس", "/fa/contact"]]
     : [["Studio", "/studio"], ["Work", "/work"], ["Films", "/#films"], ["Contact", "/contact"]];
 
   return (
@@ -35,7 +36,7 @@ export default function Navbar() {
         <nav id="primary-navigation" aria-label="Primary navigation" className={open ? "nav-links nav-links--open" : "nav-links"}>
           {links.map(([label, href]) => <Link key={href} href={href} onClick={closeMenu}>{label}</Link>)}
         </nav>
-        <Link className="language-switch" href={isFa ? "/" : "/fa"} aria-label={isFa ? "Switch to English" : "تغییر زبان به فارسی"}>{isFa ? "EN" : "فا"}</Link>
+        <Link className="language-switch" href={languageHref} aria-label={isFa ? "Switch to English" : "تغییر زبان به فارسی"}>{isFa ? "EN" : "فا"}</Link>
         <span className="navbar__meta">{isFa ? "مستقر در ایران · همکاری بین‌المللی" : <>Based in Iran <i>·</i> Working worldwide</>}</span>
       </header>
     </>
