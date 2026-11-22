@@ -5,6 +5,7 @@ import SpatialObject from "@/components/SpatialObject";
 import FilmSection from "@/components/FilmSection";
 import { projects } from "@/lib/projects";
 import Link from "next/link";
+import ProjectImage from "@/components/ProjectImage";
 
 export default function PersianHome() {
   return (
@@ -37,7 +38,7 @@ export default function PersianHome() {
         <SpatialObject />
         <section className="work section-wrap" id="work">
           <div className="section-heading"><div><div className="section-kicker"><span>۰۲</span><span>آثار منتخب</span><i /></div><h2 className="section-title">فضاهایی برای<br /><em>به‌خاطر سپردن.</em></h2></div><p className="section-heading__aside">مجموعه‌ای از مطالعات مفهومی معماری<br /><span>فضا / نور / ماده</span></p></div>
-          <div className="project-grid">{projects.map((p,i)=><article className="project-card" key={p.slug}><Link className="project-card__image-wrap" href={`/fa/projects/${p.slug}`}><img src={p.image} alt={p.title} className="project-card__image" loading="lazy" /></Link><div className="project-card__info"><div><p className="project-card__number">۰{i+1} / مطالعه مفهومی</p><h3><Link href={`/fa/projects/${p.slug}`}>{["خانه بر فراز شیب","حیاط آرام","مطالعه‌ی ماده"][i]}</Link></h3></div><span className="project-card__year">مطالعه</span></div></article>)}</div>
+          <div className="project-grid">{projects.map((p,i)=><article className="project-card" key={p.slug}><Link className="project-card__image-wrap" href={`/fa/projects/${p.slug}`}><ProjectImage src={p.image} alt={`${["خانه بر فراز شیب","حیاط آرام","مطالعه‌ی ماده"][i]} — مطالعه‌ی مفهومی معماری`} className="project-card__image" sizes="(max-width: 760px) 100vw, 50vw" /></Link><div className="project-card__info"><div><p className="project-card__number">۰{i+1} / مطالعه مفهومی</p><h3><Link href={`/fa/projects/${p.slug}`}>{["خانه بر فراز شیب","حیاط آرام","مطالعه‌ی ماده"][i]}</Link></h3></div><span className="project-card__year">مطالعه</span></div></article>)}</div>
           <div className="work__foot"><span>۰۱ — ۰۳ / مطالعات مفهومی</span><Link className="text-link" href="/fa/work">مشاهده همه آثار <span>↖</span></Link></div>
         </section>
         <section className="manifesto" id="approach"><div className="manifesto__grain" aria-hidden="true" /><div className="manifesto__top"><span>۰۳ / دیدگاه ما</span><span>هیاهوی کمتر. معناى بیشتر.</span></div><div className="manifesto__content"><p className="eyebrow">فلسفه‌ی طراحی</p><h2>نه فقط<br />آنچه <em>می‌بینیم.</em><br />آنچه <em>زندگی می‌کنیم.</em></h2></div><div className="manifesto__bottom"><p>معماری در گذر زمان تجربه می‌شود؛ در حرکت نور، پیرشدن ماده و در شیوه‌ای که انسان‌ها مکانی را از آنِ خود می‌کنند.</p><span>ROVOR STUDIO — ۲۰۲۶</span></div><div className="manifesto__orb" aria-hidden="true" /></section>

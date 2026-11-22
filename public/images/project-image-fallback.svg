@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">ROVOR architectural study</title>
+  <desc id="desc">Abstract architectural composition in charcoal, stone and bronze.</desc>
+  <rect width="1600" height="1100" fill="#20211e"/>
+  <path d="M0 830 420 520 690 690 1050 300 1600 720v380H0Z" fill="#343630"/>
+  <path d="M190 840V380l440-170v630M630 420l390-150v570M1020 840V490l260-105v455" fill="none" stroke="#b08d57" stroke-width="3" opacity=".72"/>
+  <path d="M0 900h1600M190 380l440 40 390-150 260 115" fill="none" stroke="#d9d3c5" stroke-width="2" opacity=".28"/>
+  <circle cx="1280" cy="190" r="110" fill="#b08d57" opacity=".12"/>
+  <text x="90" y="1010" fill="#d9d3c5" opacity=".7" font-family="Arial,sans-serif" font-size="25" letter-spacing="9">ROVOR / ARCHITECTURE</text>
+</svg>
