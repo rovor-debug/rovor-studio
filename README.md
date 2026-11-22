@@ -60,3 +60,15 @@ Keep the current placeholder state until an approved film and poster are availab
 - Next.js 15
 - React 19
 - CSS with responsive layouts and reduced-motion support
+
+## Project enquiry delivery
+
+The contact page includes a structured project enquiry form with optional PDF/JPG/PNG/WebP attachment (maximum 5 MB). The server endpoint sends enquiries through Resend and does not expose credentials to the browser.
+
+Configure these environment variables in the Vercel Preview and Production environments before enabling delivery:
+
+- `RESEND_API_KEY` — private Resend API key
+- `ROVOR_FROM_EMAIL` — sender address on a domain verified in Resend
+- `ROVOR_ENQUIRY_TO` — optional destination address; defaults to the studio's published contact email
+
+Until the first two variables are configured, the form deliberately reports that delivery is not connected and directs visitors to the published email address. Never commit real credentials. After configuration, test delivery and attachments in Preview before any Production release.
