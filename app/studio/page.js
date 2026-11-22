@@ -33,7 +33,7 @@ export default function StudioPage() {
           <div className="studio-hero__content">
             <p className="eyebrow">ROVOR / The studio</p>
             <h1>Architecture<br />with <em>intention.</em></h1>
-            <p>An independent architecture practice focused on residential space, interior environments, and material-led design exploration.</p>
+            <p>An independent architecture studio based in Iran, working across borders on residential space, interior environments, and material-led design exploration.</p>
           </div>
           <span className="studio-hero__index">A POINT OF VIEW / 01</span>
         </section>
@@ -43,7 +43,7 @@ export default function StudioPage() {
           <div className="studio-manifesto__grid">
             <Reveal><p className="intro__overline">An independent architecture & spatial design studio</p><h2>Design is not an image.<br />It is an experience that<br /><em>stays with you.</em></h2></Reveal>
             <Reveal delay={120}>
-              <p>ROVOR is an independent architecture and spatial design practice exploring how spaces can feel clear, grounded, and enduring. Our focus is residential architecture, interior environments, spatial concepts, and visual communication. Each study begins with the relationship between people, place, and the qualities of everyday life.</p>
+              <p>ROVOR is an independent architecture and spatial design studio based in Iran, working with clients and collaborators across borders to explore how spaces can feel clear, grounded, and enduring. Our focus is residential architecture, interior environments, spatial concepts, and visual communication. Each study begins with the relationship between people, place, and the qualities of everyday life.</p>
               <p>Our approach is research-led and detail-conscious. Rather than following a fixed style, we look for the central idea in each brief and give it a clear spatial expression.</p>
             </Reveal>
           </div>

@@ -8,7 +8,7 @@ export const metadata = {
     default: "ROVOR — Architecture Beyond Time",
     template: "%s — ROVOR Architecture Studio",
   },
-  description: "ROVOR is an independent architecture and spatial design studio exploring space, material, and light through thoughtful architectural design.",
+  description: "ROVOR is an independent architecture studio based in Iran, working worldwide across architecture and spatial design, with a focus on space, material, and light.",
   applicationName: "ROVOR Architecture Studio",
   keywords: ["ROVOR", "architecture", "architecture studio", "spatial design", "interior architecture", "architectural visualization"],
   alternates: {

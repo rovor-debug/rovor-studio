@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link href="/#films" onClick={closeMenu}>Films</Link>
           <Link href="/contact" onClick={closeMenu}>Contact</Link>
         </nav>
-        <span className="navbar__meta">Architecture / Spatial Design</span>
+        <span className="navbar__meta">Based in Iran <i>·</i> Working worldwide</span>
       </header>
     </>
   );

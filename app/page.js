@@ -21,7 +21,7 @@ export default function Home() {
         <section className="hero" id="home">
           <div className="hero__image" aria-hidden="true" />
           <div className="hero__veil" />
-          <div className="hero__topline"><span>Independent architecture studio</span><span>Independent practice · Concept & collaboration</span></div>
+          <div className="hero__topline"><span>Based in Iran</span><span>Independent practice · Working worldwide</span></div>
           <div className="hero__content">
             <p className="eyebrow hero__eyebrow">ROVOR / Architecture & spatial design</p>
             <h1>Space<br /><em>with a point</em><br />of view<span className="hero__period">.</span></h1>
@@ -89,7 +89,7 @@ export default function Home() {
         <section className="contact section-wrap" id="contact">
           <div className="section-kicker"><span>06</span><span>Start a conversation</span><i /></div>
           <div className="contact__body"><p className="eyebrow">Have a project in mind?</p><h2>Let’s make<br /><em>room for it.</em></h2><div className="contact__action"><a className="contact__email" href="/contact">Project enquiries <span>↗</span></a><p>For collaborations, project enquiries and thoughtful conversations.</p></div></div>
-          <div className="contact__bottom"><span>Architecture / Interiors / Spatial design</span><span>Based everywhere. Working worldwide.</span></div>
+          <div className="contact__bottom"><span>Architecture / Interiors / Spatial design</span><span>Based in Iran · Working worldwide.</span></div>
         </section>
       </main>
       <Footer />

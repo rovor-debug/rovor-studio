@@ -24,7 +24,7 @@ export default function ContactPage() {
         <section className="contact-page__hero section-wrap">
           <p className="eyebrow">ROVOR / Contact</p>
           <h1>Every good project<br />starts with a <em>conversation.</em></h1>
-          <p className="contact-page__intro">For collaborations, architectural enquiries, and thoughtful conversations, get in touch.</p>
+          <p className="contact-page__intro">Based in Iran and working worldwide, ROVOR welcomes architectural enquiries, remote collaborations, and thoughtful conversations across borders.</p>
         </section>
         <section className="contact-page__details section-wrap">
           <div>

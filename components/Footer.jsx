@@ -15,7 +15,7 @@ export default function Footer() {
         <Link href="/contact">Start a conversation ↗</Link>
       </div>
       <div className="footer__bottom">
-        <span>Independent architecture & spatial design studio.</span>
+        <span>Based in Iran · Independent architecture & spatial design.</span>
         <span>© {new Date().getFullYear()} ROVOR Studio</span>
         <span className="footer__socials">
           {socialLinks.map((item) => (
