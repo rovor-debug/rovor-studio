@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   return {
     title: project ? project.title : "Selected Work",
     description: project?.description || "Selected architecture work by ROVOR Studio.",
-    alternates: project ? { canonical: `/projects/${project.slug}` } : undefined,
+    alternates: project ? { canonical: `/projects/${project.slug}`, languages: { en: `/projects/${project.slug}`, fa: `/fa/projects/${project.slug}` } } : undefined,
     openGraph: project ? { title: `${project.title} — ROVOR`, description: project.description, images: [project.image] } : undefined,
   };
 }
